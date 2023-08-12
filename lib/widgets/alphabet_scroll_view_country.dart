@@ -2,7 +2,7 @@ import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:e_commerce_car/app/auth/controller/login_location_controller.dart';
+import 'package:carstore_car/app/auth/controller/login_location_controller.dart';
 
 class AlphabetScrollViewCountry extends StatelessWidget {
   const AlphabetScrollViewCountry({super.key});

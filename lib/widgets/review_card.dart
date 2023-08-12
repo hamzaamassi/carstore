@@ -1,9 +1,9 @@
 // ignore_for_file: dead_code
 
-import 'package:e_commerce_car/app/news/model/review_news.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/theme/my_fonts.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
+import 'package:carstore_car/app/news/model/review_news.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/theme/my_fonts.dart';
+import 'package:carstore_car/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

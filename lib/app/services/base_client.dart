@@ -4,10 +4,10 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:e_commerce_car/app/profile/controllers/profile_controller.dart';
-import 'package:e_commerce_car/core/config/translations/strings_enum.dart';
-import 'package:e_commerce_car/local/my_shared_pref.dart';
-import 'package:e_commerce_car/widgets/custom_snackbar.dart';
+import 'package:carstore_car/app/profile/controllers/profile_controller.dart';
+import 'package:carstore_car/core/config/translations/strings_enum.dart';
+import 'package:carstore_car/local/my_shared_pref.dart';
+import 'package:carstore_car/widgets/custom_snackbar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart' as getx;
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';

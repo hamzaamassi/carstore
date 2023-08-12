@@ -1,12 +1,12 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:e_commerce_car/binding/app_binding.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/theme/my_theme.dart';
-import 'package:e_commerce_car/core/config/translations/localization_service.dart';
-import 'package:e_commerce_car/firebase_options.dart';
-import 'package:e_commerce_car/local/my_shared_pref.dart';
-import 'package:e_commerce_car/routes/app_pages.dart';
+import 'package:carstore_car/binding/app_binding.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/theme/my_theme.dart';
+import 'package:carstore_car/core/config/translations/localization_service.dart';
+import 'package:carstore_car/firebase_options.dart';
+import 'package:carstore_car/local/my_shared_pref.dart';
+import 'package:carstore_car/routes/app_pages.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

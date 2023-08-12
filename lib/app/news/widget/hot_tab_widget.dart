@@ -1,9 +1,9 @@
-import 'package:e_commerce_car/app/news/controllers/news_controller.dart';
-import 'package:e_commerce_car/app/news/model/review_news.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
-import 'package:e_commerce_car/widgets/calculate_list_height.dart';
-import 'package:e_commerce_car/widgets/general_list_horizontal_card.dart';
-import 'package:e_commerce_car/widgets/review_card.dart';
+import 'package:carstore_car/app/news/controllers/news_controller.dart';
+import 'package:carstore_car/app/news/model/review_news.dart';
+import 'package:carstore_car/utils/app_icons.dart';
+import 'package:carstore_car/widgets/calculate_list_height.dart';
+import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
+import 'package:carstore_car/widgets/review_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    namespace "hamza.a.e_commerce_car"
+    namespace "ps.app.carstore_car"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 

@@ -1,8 +1,8 @@
-import 'package:e_commerce_car/app/brand/model/brand.dart';
-import 'package:e_commerce_car/app/cars/model/car.dart';
-import 'package:e_commerce_car/app/home/model/home_response.dart';
-import 'package:e_commerce_car/app/services/base_client.dart';
-import 'package:e_commerce_car/utils/constants.dart';
+import 'package:carstore_car/app/brand/model/brand.dart';
+import 'package:carstore_car/app/cars/model/car.dart';
+import 'package:carstore_car/app/home/model/home_response.dart';
+import 'package:carstore_car/app/services/base_client.dart';
+import 'package:carstore_car/utils/constants.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {

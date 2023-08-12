@@ -1,7 +1,7 @@
 import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
-import 'package:e_commerce_car/app/brand/controller/brand_controller.dart';
-import 'package:e_commerce_car/core/config/theme/my_fonts.dart';
-import 'package:e_commerce_car/routes/app_pages.dart';
+import 'package:carstore_car/app/brand/controller/brand_controller.dart';
+import 'package:carstore_car/core/config/theme/my_fonts.dart';
+import 'package:carstore_car/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

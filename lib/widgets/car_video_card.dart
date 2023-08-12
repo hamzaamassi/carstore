@@ -1,6 +1,6 @@
-import 'package:e_commerce_car/app/video/models/video.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/theme/my_fonts.dart';
+import 'package:carstore_car/app/video/models/video.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

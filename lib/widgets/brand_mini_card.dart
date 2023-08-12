@@ -1,8 +1,8 @@
-import 'package:e_commerce_car/app/brand/model/brand.dart';
-import 'package:e_commerce_car/app/cars/model/car.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/theme/my_fonts.dart';
-import 'package:e_commerce_car/routes/app_pages.dart';
+import 'package:carstore_car/app/brand/model/brand.dart';
+import 'package:carstore_car/app/cars/model/car.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/theme/my_fonts.dart';
+import 'package:carstore_car/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

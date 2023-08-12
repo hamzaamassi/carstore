@@ -80,6 +80,6 @@ class DefaultFirebaseOptions {
     storageBucket: 'business-3666c.appspot.com',
     androidClientId: '593385696007-7nhkopr5rcm2sm5gm7sh4vqftqm2bbvb.apps.googleusercontent.com',
     iosClientId: '593385696007-55h5smpdkbvcop7r3lc85si89a1vgmp9.apps.googleusercontent.com',
-    iosBundleId: 'hamza.a.eCommerceCar.RunnerTests',
+    iosBundleId: 'ps.app.eCommerceCar.RunnerTests',
   );
 }

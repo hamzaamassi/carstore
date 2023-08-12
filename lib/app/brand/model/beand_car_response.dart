@@ -4,7 +4,7 @@
 
 import 'dart:convert';
 
-import 'package:e_commerce_car/app/brand/model/brand.dart';
+import 'package:carstore_car/app/brand/model/brand.dart';
 
 BrandResponse brandResponseFromJson(String str) => BrandResponse.fromJson(json.decode(str));
 

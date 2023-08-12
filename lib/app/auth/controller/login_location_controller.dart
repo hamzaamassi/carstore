@@ -1,5 +1,5 @@
-import 'package:e_commerce_car/models/country.dart';
-import 'package:e_commerce_car/models/country_list.dart';
+import 'package:carstore_car/models/country.dart';
+import 'package:carstore_car/models/country_list.dart';
 import 'package:get/get.dart';
 
 class LoginLocationController extends GetxController {

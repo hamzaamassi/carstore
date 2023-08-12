@@ -1,5 +1,5 @@
-import 'package:e_commerce_car/app/video/models/video.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
+import 'package:carstore_car/app/video/models/video.dart';
+import 'package:carstore_car/utils/app_icons.dart';
 import 'package:get/get.dart';
 
 List<Video> VideoList = [

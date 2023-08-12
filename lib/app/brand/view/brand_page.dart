@@ -1,14 +1,14 @@
 // ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
 
-import 'package:e_commerce_car/app/brand/controller/brand_controller.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/translations/strings_enum.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
-import 'package:e_commerce_car/widgets/alphabet_scroll_view_brand.dart';
-import 'package:e_commerce_car/widgets/brand_details_card.dart';
-import 'package:e_commerce_car/widgets/calculate_grid_height.dart';
-import 'package:e_commerce_car/widgets/general_list_grid_card.dart';
-import 'package:e_commerce_car/widgets/general_search.dart';
+import 'package:carstore_car/app/brand/controller/brand_controller.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/translations/strings_enum.dart';
+import 'package:carstore_car/utils/app_icons.dart';
+import 'package:carstore_car/widgets/alphabet_scroll_view_brand.dart';
+import 'package:carstore_car/widgets/brand_details_card.dart';
+import 'package:carstore_car/widgets/calculate_grid_height.dart';
+import 'package:carstore_car/widgets/general_list_grid_card.dart';
+import 'package:carstore_car/widgets/general_search.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

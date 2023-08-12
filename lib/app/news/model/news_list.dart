@@ -1,5 +1,5 @@
-import 'package:e_commerce_car/app/news/model/news.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
+import 'package:carstore_car/app/news/model/news.dart';
+import 'package:carstore_car/utils/app_icons.dart';
 import 'package:get/get.dart';
 
 List<News> NewsList = [

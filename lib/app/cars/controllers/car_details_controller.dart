@@ -1,25 +1,25 @@
 // ignore_for_file: deprecated_member_use, avoid_print
 
 
-import 'package:e_commerce_car/app/cars/model/car.dart';
-import 'package:e_commerce_car/app/cars/model/car_list_response.dart';
-import 'package:e_commerce_car/app/cars/model/car_response.dart';
-import 'package:e_commerce_car/app/cars/model/compressed_model.dart';
-import 'package:e_commerce_car/app/cars/model/key_specs_model.dart';
-import 'package:e_commerce_car/app/cars/widget/price_tabs_widget.dart';
-import 'package:e_commerce_car/app/cars/widget/qa_tabs_widget.dart';
-import 'package:e_commerce_car/app/services/base_client.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
-import 'package:e_commerce_car/core/config/theme/my_fonts.dart';
-import 'package:e_commerce_car/models/country.dart';
-import 'package:e_commerce_car/models/country_list.dart';
-import 'package:e_commerce_car/utils/app_icons.dart';
-import 'package:e_commerce_car/utils/constants.dart';
-import 'package:e_commerce_car/widgets/alphabet_scroll_view_country.dart';
-import 'package:e_commerce_car/widgets/custom_primary_button.dart';
-import 'package:e_commerce_car/widgets/custom_text_field.dart';
-import 'package:e_commerce_car/widgets/general_list_horizontal_card.dart';
-import 'package:e_commerce_car/widgets/key_specs_card.dart';
+import 'package:carstore_car/app/cars/model/car.dart';
+import 'package:carstore_car/app/cars/model/car_list_response.dart';
+import 'package:carstore_car/app/cars/model/car_response.dart';
+import 'package:carstore_car/app/cars/model/compressed_model.dart';
+import 'package:carstore_car/app/cars/model/key_specs_model.dart';
+import 'package:carstore_car/app/cars/widget/price_tabs_widget.dart';
+import 'package:carstore_car/app/cars/widget/qa_tabs_widget.dart';
+import 'package:carstore_car/app/services/base_client.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/config/theme/my_fonts.dart';
+import 'package:carstore_car/models/country.dart';
+import 'package:carstore_car/models/country_list.dart';
+import 'package:carstore_car/utils/app_icons.dart';
+import 'package:carstore_car/utils/constants.dart';
+import 'package:carstore_car/widgets/alphabet_scroll_view_country.dart';
+import 'package:carstore_car/widgets/custom_primary_button.dart';
+import 'package:carstore_car/widgets/custom_text_field.dart';
+import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
+import 'package:carstore_car/widgets/key_specs_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,5 +1,5 @@
-import 'package:e_commerce_car/core/extensions/image_extensions.dart';
-import 'package:e_commerce_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore_car/core/extensions/image_extensions.dart';
+import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:flutter/material.dart';
 
 class BoxDecorations {
