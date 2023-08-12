@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "593385696007",
+    "project_id": "business-3666c",
+    "storage_bucket": "business-3666c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593385696007:android:ac30ab1505f05a006673a2",
+        "android_client_info": {
+          "package_name": "ps.app.carstore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593385696007-5smc6617k2b3qppn7p7kchm38hv77m7r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc_-sF8R_ionm08MM37yg-iSxZhMlELzM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "593385696007-5smc6617k2b3qppn7p7kchm38hv77m7r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "593385696007-55h5smpdkbvcop7r3lc85si89a1vgmp9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hamza.a.eCommerceCar.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
