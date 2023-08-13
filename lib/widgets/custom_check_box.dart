@@ -11,7 +11,7 @@ class CustomCheckbox extends StatelessWidget {
   final Color? borderColor;
   final String label;
 
-  CustomCheckbox({
+  const CustomCheckbox({super.key,
     required this.value,
     required this.onChanged,
     this.activeColor,

@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
 
+
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/translations/strings_enum.dart';
 import 'package:carstore_car/routes/app_pages.dart';
@@ -20,7 +21,6 @@ class CarPage extends GetView<CarController> {
 
   @override
   Widget build(BuildContext context) {
-    final CarController controller = Get.find<CarController>();
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.only(left: 20.w,right:  20.w,top:  20.h),
@@ -63,6 +63,7 @@ class CarPage extends GetView<CarController> {
                         list: controller.cars,
                         itemBuilder: (BuildContext, int) {
                           final car = controller.cars[int];
+                          print("sam car $int "+car.toJson().toString());
                           return CarsOfferCard(car: car);
                         },
                         heightSizedBox:

@@ -38,32 +38,32 @@ class GeneralListGridCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
-        // mainAxisSize: MainAxisSize.min,
-        children: [
-          SectionListTitle(
-            title: title,
-            showMoreText: showMoreText!,
-            onClickMoreText: onClickMoreText,
-            style: style,
+    return Column(
+      // mainAxisSize: MainAxisSize.min,
+      children: [
+        SectionListTitle(
+          title: title,
+          showMoreText: showMoreText!,
+          onClickMoreText: onClickMoreText,
+          style: style,
+        ),
+        SizedBox(
+          height: heightSizedBox.h,
+          child: GridView.builder(
+            itemCount: list.length,
+            scrollDirection: scrollDirection,
+            physics: physics ?? const BouncingScrollPhysics(),
+            padding: EdgeInsets.symmetric(vertical: 20.h),
+            shrinkWrap: true,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount ?? 2,
+                mainAxisSpacing: mainAxisSpacing ?? 20.w,
+                mainAxisExtent: mainAxisExtent ?? 225.h,
+                crossAxisSpacing: crossAxisSpacing ?? 20.h),
+            itemBuilder: itemBuilder,
           ),
-          SizedBox(
-            height: heightSizedBox.h,
-            child: GridView.builder(
-                itemCount: list.length,
-                scrollDirection: scrollDirection,
-                physics: physics ?? const BouncingScrollPhysics(),
-                padding: EdgeInsets.symmetric(vertical: 20.h),
-                shrinkWrap: true,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: crossAxisCount ?? 2,
-                    mainAxisSpacing: mainAxisSpacing ?? 20.w,
-                    mainAxisExtent: mainAxisExtent ?? 225.h,
-                    crossAxisSpacing: crossAxisSpacing ?? 20.h),
-                itemBuilder: itemBuilder),
-          ),
-        ],
-
+        ),
+      ],
     );
   }
 }

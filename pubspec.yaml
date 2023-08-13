@@ -55,9 +55,6 @@ dependencies:
   flutter_widget_from_html:
   shimmer:
   flutter_rating_bar:
-
-
-
   flutter_localizations:
     sdk: flutter
 

@@ -19,7 +19,6 @@ class CarsMiniCard extends StatelessWidget {
     return GestureDetector(
       onTap: () =>
       Get.toNamed(Routes.carDetails),
-      //, arguments: CarDetailsPage(car: car)
       child: Container(
         width: 150.w,
         height: 225.h,
@@ -43,7 +42,7 @@ class CarsMiniCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    car.name ?? '',
+                    car.name,
                     style: TextStyle(
                       fontSize: MyFonts.body2TextSize,
                       color: LightThemeColors.iconColor,
