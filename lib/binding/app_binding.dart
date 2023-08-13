@@ -12,7 +12,6 @@ import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
 import 'package:carstore_car/app/cars/controllers/car_info_controller.dart';
 import 'package:carstore_car/app/community/controllers/community_controller.dart';
-import 'package:carstore_car/app/home/controllers/home_controller.dart';
 import 'package:carstore_car/app/news/controllers/news_controller.dart';
 import 'package:carstore_car/app/order/controllers/order_controller.dart';
 import 'package:carstore_car/app/profile/controllers/profile_controller.dart';
@@ -40,7 +39,6 @@ class AppBinding extends Bindings {
 
     Get.lazyPut<CommunityController>(()=>CommunityController());
 
-    Get.lazyPut<HomeController>(()=>HomeController());
 
     Get.lazyPut<NewsController>(()=>NewsController());
 

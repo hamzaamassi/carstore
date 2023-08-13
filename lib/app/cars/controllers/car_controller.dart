@@ -1,8 +1,7 @@
 import 'package:carstore_car/app/brand/model/brand.dart';
-import 'package:carstore_car/app/brand/model/brand_list_response.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/app/cars/model/car_list_response.dart';
-import 'package:carstore_car/app/services/base_client.dart';
+import 'package:carstore_car/services/base_client.dart';
 import 'package:carstore_car/utils/app_icons.dart';
 import 'package:carstore_car/utils/constants.dart';
 import 'package:get/get.dart';
@@ -17,6 +16,7 @@ class CarController extends GetxController {
     loadBrand();
     loadCars();
   }
+
 
   void loadCars() async {
     try {
@@ -44,6 +44,8 @@ class CarController extends GetxController {
       Brand(id: 4, name: 'Discount', logo: AppIcons.discount),
     ].obs;
   }
+
+
 // void loadBrand() async {
 //   try {
 //     await BaseClient.get(

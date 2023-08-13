@@ -7,20 +7,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class ImageMiniCompressedCard extends GetView<CarDetailsController> {
-  const ImageMiniCompressedCard({Key? key, required this.compressed}) : super(key: key);
-final CompressedModel compressed;
+  const ImageMiniCompressedCard({Key? key, required this.compressed})
+      : super(key: key);
+  final CompressedModel compressed;
+
   @override
   Widget build(BuildContext context) {
-
     return Stack(
       children: [
         Container(
           width: 48.w,
           decoration: BoxDecoration(
-              image: const DecorationImage(
-                  image: NetworkImage(
-                      "https://hips.hearstapps.com/hmg-prod/images/2023-mclaren-artura-101-1655218102.jpg?crop=1.00xw:0.847xh;0,0.153xh&resize=1200:*"),
-                  fit: BoxFit.cover),
+              color: LightThemeColors.iconColor.withOpacity(0.5),
+              image: DecorationImage(
+                  image: AssetImage(compressed.image), fit: BoxFit.cover),
               borderRadius: BorderRadius.circular(5.r)),
         ),
         Container(
@@ -30,20 +30,22 @@ final CompressedModel compressed;
               color: Theme.of(context)
                   .colorScheme
                   .copyWith(
-                  primary: LightThemeColors.scaffoldBackgroundColor
-                      .withOpacity(0.3))
+                      primary: LightThemeColors.scaffoldBackgroundColor
+                          .withOpacity(0.3))
                   .primary),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("200",
+              Text(compressed.details,
                   style: TextStyle(
                       fontSize: MyFonts.smallTextSize,
                       color: LightThemeColors.backgroundColor)),
-              Text("Images",
-                  style: TextStyle(
-                      fontSize: MyFonts.smallTextSize,
-                      color: LightThemeColors.backgroundColor))
+              Text(
+                compressed.name,
+                style: TextStyle(
+                    fontSize: MyFonts.smallTextSize,
+                    color: LightThemeColors.dividerColor),
+              )
             ],
           ),
         ),

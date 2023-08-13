@@ -1,8 +1,9 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-int calculateGridHeight(List list, double itemHeight,
-    double separatorHeight, double crossAxisCount) {
-  int itemCount = list.length;
-  int rowCount = (itemCount / crossAxisCount).ceil();
-  return ((itemHeight.h - 10) * rowCount + separatorHeight * (rowCount - 1)).toInt();
+int calculateGridHeight(List list, int itemHeight,
+    int separatorHeight, int crossAxisCount) {
+  int count = list.length;
+  double height = itemHeight.h;
+  int rowCount = (count / crossAxisCount).ceil();
+  return (((height-15) * rowCount) + (separatorHeight * rowCount)).toInt();
 }

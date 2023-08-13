@@ -17,6 +17,7 @@ class CarsFullCard extends GetView<CarController> {
       // onTap: () => Get.toNamed(Routes.carDetails, arguments: CarDetailsPage(car: car)),
       child: Container(
         width: double.infinity.w,
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
         ),

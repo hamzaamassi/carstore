@@ -16,18 +16,8 @@ class CarsOfferCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxInt? carId;
-    Map<String, dynamic> arguments;
-
     return GestureDetector(
-      onTap: () => {
-      carId!.value = car.id,
-        arguments = {
-          "carId": carId,
-        },
-
-      Get.toNamed(Routes.carDetails, arguments: arguments),
-      },
+      onTap: navigateToCarDetailsPage,
       child: Container(
         width: 158,
         height: 225,
@@ -55,7 +45,7 @@ class CarsOfferCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    car.name.substring(0, 10),
+                    car.name,
                     style: TextStyle(
                       fontSize: MyFonts.body2TextSize,
                       color: LightThemeColors.iconColor,
@@ -66,7 +56,7 @@ class CarsOfferCard extends StatelessWidget {
                   Opacity(
                     opacity: .8,
                     child: Text(
-                      car.name.substring(0, 10), //
+                      car.name, //
                       style: TextStyle(fontSize: MyFonts.chipTextSize),
                     ),
                   ),
@@ -155,5 +145,11 @@ class CarsOfferCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void navigateToCarDetailsPage() {
+    Get.toNamed(Routes.carDetails, arguments: {
+      "carId": car.id,
+    });
   }
 }

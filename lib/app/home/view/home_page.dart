@@ -20,112 +20,116 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class HomePage extends GetView<HomeController> {
-  const HomePage({
+  HomePage({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final HomeController controller = Get.find<HomeController>();
     return GetBuilder<HomeController>(
         init: HomeController(),
         builder: (controller) {
-          return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8.0.w),
-              child: getSearch(
-                leadingIcon: AppIcons.underRow,
-                leadingData: const Text(Strings.bangkok),
-                leadingOnTap: () {},
-                trailingIcon: AppIcons.chat,
-                trailingOnTap: () {},
-                circleAvatarColor: LightThemeColors.backgroundColor,
-                isSearch: true,
-                size: 8,
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Padding(
-                padding: EdgeInsets.only(top: 30.h),
-                child: SingleChildScrollView(
-                  physics: const BouncingScrollPhysics(),
-                  child: Column(
-                    children: [
-                      CarsListFullCard(
-                          car: controller.sliderList,
+          return controller.isLoading
+              ? const Center(child: CircularProgressIndicator(color: LightThemeColors.primaryColor,))
+              : Scaffold(
+                  body: Padding(
+                    padding:
+                        EdgeInsets.only(left: 20.w, right: 20.w, top: 20.h),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 8.0.w),
+                          child: getSearch(
+                            leadingIcon: AppIcons.underRow,
+                            leadingData: const Text(Strings.bangkok),
+                            leadingOnTap: () {},
+                            trailingIcon: AppIcons.chat,
+                            trailingOnTap: () {},
+                            circleAvatarColor: LightThemeColors.backgroundColor,
+                            isSearch: true,
+                            size: 8,
+                          ),
                         ),
-                      SizedBox(height: 25.h),
-                      GeneralListHorizontalCard(
-                          title: null,
-                          list: controller.brandList,
-                          showMoreText: null,
-                          itemBuilder: (BuildContext, int) {
-                            final list = controller.brandList[int];
-                            return BrandQuickMiniCard(brand: list);
-                          },
-                          separator: 10,
-                          heightSizedBox: 30,
+                        Expanded(
+                          flex: 1,
+                          child: Padding(
+                            padding: EdgeInsets.only(top: 30.h),
+                            child: SingleChildScrollView(
+                              physics: const BouncingScrollPhysics(),
+                              child: Column(
+                                children: [
+                                  CarsListFullCard(
+                                    slider: controller.sliderList,
+                                  ),
+                                  SizedBox(height: 25.h),
+                                  GeneralListHorizontalCard(
+                                    title: null,
+                                    list: controller.brandList,
+                                    showMoreText: null,
+                                    itemBuilder: (BuildContext, int) {
+                                      final list = controller.brandList[int];
+                                      return BrandQuickMiniCard(brand: list);
+                                    },
+                                    separator: 10,
+                                    heightSizedBox: 30,
+                                  ),
+                                  SizedBox(height: 28.h),
+                                  GeneralListHorizontalCard(
+                                    title: Strings.topDeal.tr,
+                                    list: controller.carList,
+                                    itemBuilder: (BuildContext, int) {
+                                      final list = controller.carList[int];
+                                      return CarsMiniCard(car: list);
+                                    },
+                                    separator: 15,
+                                    heightSizedBox: 225,
+                                  ),
+                                  SizedBox(height: 28.h),
+                                  GeneralListHorizontalCard(
+                                    title: Strings.popularBrands.tr,
+                                    list: controller.brandList,
+                                    itemBuilder: (BuildContext, int) {
+                                      final list = controller.brandList[int];
+                                      return BrandMiniCard(brand: list);
+                                    },
+                                    separator: 15,
+                                    heightSizedBox: 102,
+                                  ),
+                                  SizedBox(height: 28.h),
+                                  GeneralListHorizontalCard(
+                                    title: Strings.upcoming.tr,
+                                    list: controller.carList,
+                                    itemBuilder: (BuildContext, int) {
+                                      final list = controller.carList[int];
+                                      return CarsMiniUpcomingCard(car: list);
+                                    },
+                                    separator: 25,
+                                    heightSizedBox: 200,
+                                  ),
+                                  SizedBox(height: 28.h),
+                                  GeneralListHorizontalCard(
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    title: Strings.news.tr,
+                                    scrollDirection: Axis.vertical,
+                                    list: NewsList,
+                                    itemBuilder: (BuildContext, index) {
+                                      final list = NewsList[index];
+                                      return CarNewsCard(news: list);
+                                    },
+                                    separator: 15,
+                                    heightSizedBox:
+                                        calculateListHeight(NewsList, 90, 15),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                         ),
-                      SizedBox(height: 28.h),
-                     GeneralListHorizontalCard(
-                          title: Strings.topDeal.tr,
-                          list: controller.carList,
-                          itemBuilder: (BuildContext, int) {
-                            final list = controller.carList[int];
-                            return CarsMiniCard(car: list);
-                          },
-                          separator: 15,
-                          heightSizedBox: 225,
-                        ),
-                      SizedBox(height: 28.h),
-                   GeneralListHorizontalCard(
-                          title: Strings.popularBrands.tr,
-                          list: controller.brandList,
-                          itemBuilder: (BuildContext, int) {
-                            final list = controller.brandList[int];
-                            return BrandMiniCard(brand: list);
-                          },
-                          separator: 15,
-                          heightSizedBox: 102,
-                        ),
-                      SizedBox(height: 28.h),
-                      GeneralListHorizontalCard(
-                          title: Strings.upcoming.tr,
-                          list: controller.carList,
-                          itemBuilder: (BuildContext, int) {
-                            final list = controller.carList[int];
-                            return CarsMiniUpcomingCard(car: list);
-                          },
-                          separator: 25,
-                          heightSizedBox: 200,
-                        ),
-                      SizedBox(height: 28.h),
-                     GeneralListHorizontalCard(
-                          physics: const NeverScrollableScrollPhysics(),
-                          title: Strings.news.tr,
-                          scrollDirection: Axis.vertical,
-                          list: NewsList,
-                          itemBuilder: (BuildContext, index) {
-                            final list = NewsList[index];
-                            return CarNewsCard(news: list);
-                          },
-                          separator: 15,
-                          heightSizedBox: calculateListHeight(NewsList, 90, 15),
-                        ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );});
+                );
+        });
   }
-
 }

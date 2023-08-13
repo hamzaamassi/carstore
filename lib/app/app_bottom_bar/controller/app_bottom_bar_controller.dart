@@ -7,5 +7,6 @@ class AppBottomBarController extends GetxController {
 
   onTapNavFunction(int value) {
     selectedIndex.value = value;
+    update();
   }
 }
