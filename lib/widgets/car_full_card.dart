@@ -14,7 +14,6 @@ class CarsFullCard extends GetView<CarController> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () => Get.toNamed(Routes.carDetails, arguments: CarDetailsPage(car: car)),
       child: Container(
         width: double.infinity.w,
         clipBehavior: Clip.antiAlias,

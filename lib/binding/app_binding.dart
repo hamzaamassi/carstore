@@ -6,11 +6,7 @@ import 'package:carstore_car/app/auth/controller/login_location_controller.dart'
 import 'package:carstore_car/app/auth/controller/login_verification_controller.dart';
 import 'package:carstore_car/app/auto_part/controllers/auto_part_controller.dart';
 import 'package:carstore_car/app/brand/controller/brand_controller.dart';
-import 'package:carstore_car/app/cars/controllers/car_compare_controller.dart';
-import 'package:carstore_car/app/cars/controllers/car_compare_list_controller.dart';
 import 'package:carstore_car/app/cars/controllers/car_controller.dart';
-import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
-import 'package:carstore_car/app/cars/controllers/car_info_controller.dart';
 import 'package:carstore_car/app/community/controllers/community_controller.dart';
 import 'package:carstore_car/app/news/controllers/news_controller.dart';
 import 'package:carstore_car/app/order/controllers/order_controller.dart';
@@ -32,10 +28,6 @@ class AppBinding extends Bindings {
     Get.lazyPut<BrandController>(()=>BrandController());
 
     Get.lazyPut<CarController>(()=>CarController());
-    Get.lazyPut<CarDetailsController>(()=>CarDetailsController());
-    Get.lazyPut<CarInfoController>(()=>CarInfoController());
-    Get.lazyPut<CarsCompareController>(()=>CarsCompareController());
-    Get.lazyPut<CarCompareListController>(()=>CarCompareListController());
 
     Get.lazyPut<CommunityController>(()=>CommunityController());
 

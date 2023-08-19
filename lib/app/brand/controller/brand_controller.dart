@@ -1,8 +1,8 @@
-import 'package:carstore_car/app/brand/model/beand_car_response.dart';
 import 'package:carstore_car/app/brand/model/brand.dart';
 import 'package:carstore_car/app/brand/model/brand_list_response.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/app/cars/model/car_list_response.dart';
+import 'package:carstore_car/routes/app_pages.dart';
 import 'package:carstore_car/services/base_client.dart';
 import 'package:carstore_car/utils/constants.dart';
 import 'package:get/get.dart';
@@ -10,41 +10,45 @@ import 'package:get/get.dart';
 class BrandController extends GetxController {
   RxList<Brand> brands = RxList();
   RxList<Car> cars = RxList();
-  RxList<BrandCar> brandCar = RxList();
-
-  final RxList<Brand> displayedCountries = <Brand>[].obs;
-  final RxString searchQuery = ''.obs;
-
-  RxInt index = 0.obs;
-  RxInt brandId = 0.obs;
+  RxList<Car> brandCar = RxList();
   RxString brandName = ''.obs;
-  RxString name = ''.obs; // Assuming it's a string
+  RxInt brandId = 0.obs;
+  bool isLoading = true;
+  RxInt index = 0.obs;
+  RxString name = ''.obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-    load();
+
+@override
+  void onReady() {
+  loadBrandCars();
+    super.onReady();
   }
-
-  void load() async {
+  void loadBrandCars() async {
     try {
+      isLoading = true;
+      final url = '${Constants.brandDetails}$brandId';
       await BaseClient.get(
-        Constants.brands,
+        url,
         onSuccess: (response) {
-          BrandsResponse loadedBrands = brandsResponseFromJson(response.toString());
-          brands.value= loadedBrands.brands;
+          CarsResponse loadedBrandCars =
+              carsResponseFromJson(response.toString());
+          brandCar.value = loadedBrandCars.cars;
+          Get.toNamed(Routes.brandDetails);
+          isLoading = false;
+          update();
         },
         onError: (error) {
           BaseClient.handleApiError(error);
           error.printInfo();
         },
       );
-
       await BaseClient.get(
         Constants.cars,
         onSuccess: (response) {
           CarsResponse loadedCars = carsResponseFromJson(response.toString());
           cars.value = loadedCars.cars;
+          isLoading = false;
+          update();
         },
         onError: (error) {
           BaseClient.handleApiError(error);
@@ -52,16 +56,20 @@ class BrandController extends GetxController {
         },
       );
       await BaseClient.get(
-        '${Constants.brandDetails}$brandId}',
+        Constants.brands,
         onSuccess: (response) {
-          BrandResponse loadedCars = brandResponseFromJson(response.toString());
-          brandCar.value = loadedCars.brandCar;
+          BrandsResponse loadedBrands =
+          brandsResponseFromJson(response.toString());
+          brands.value = loadedBrands.brands;
+          isLoading = false;
+          update();
         },
         onError: (error) {
           BaseClient.handleApiError(error);
           error.printInfo();
         },
       );
+
 
     } catch (e) {
       e.printInfo();

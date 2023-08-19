@@ -1,4 +1,3 @@
-import 'package:carstore_car/app/brand/model/beand_car_response.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
@@ -8,10 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class CarDetailsCard extends StatelessWidget {
-  const CarDetailsCard({Key? key, required this.brandCar}) : super(key: key);
+  const CarDetailsCard({Key? key, required this.car}) : super(key: key);
 
-  // final Car car;
-  final BrandCar brandCar;
+  final Car car;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class CarDetailsCard extends StatelessWidget {
                   top: 0.h,
                   bottom: 0.h,
                   left: 10.w,
-                  child: Image.network(brandCar.image, height: 80.h, width: 120.w),
+                  child: Image.network(car.image, height: 80.h, width: 120.w),
                 ),
                 SizedBox(width: 15.w),
                 Positioned(
@@ -44,7 +42,7 @@ class CarDetailsCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        brandCar.name,
+                        car.name,
                         style: TextStyle(
                           fontSize: MyFonts.body2TextSize,
                           color: LightThemeColors.iconColor,
@@ -55,14 +53,14 @@ class CarDetailsCard extends StatelessWidget {
                       Opacity(
                           opacity: .8,
                           child: Text(
-                            brandCar.name,//
+                            car.name,//
                             style: TextStyle(
                               fontSize: MyFonts.chipTextSize,
                             ),
                           )),
                       SizedBox(height: 3.h),
                       Text(
-                        '\$${brandCar.price}',
+                        '\$${car.price}',
                         style: TextStyle(
                           fontSize: MyFonts.body2TextSize,color: LightThemeColors.primaryColor
                         ),

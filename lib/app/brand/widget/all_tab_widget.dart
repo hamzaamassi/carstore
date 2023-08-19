@@ -21,7 +21,7 @@ class AllTapWidget extends GetView<BrandController> {
             showMoreText: null,
             itemBuilder: (context, index) {
               var list = controller.brandCar[index];
-              return CarDetailsCard(brandCar: list);
+              return CarDetailsCard(car: list);
             },
             separator: 15,
             heightSizedBox: calculateListHeight(controller.cars, 95, 15),
@@ -29,7 +29,5 @@ class AllTapWidget extends GetView<BrandController> {
         ],
       ),
     );
-    return Container();
-
   }
 }

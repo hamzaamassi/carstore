@@ -1,9 +1,10 @@
 // ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
 
-import 'package:carstore_car/app/home/controllers/home_controller.dart';
+import 'package:carstore_car/app/app_bottom_bar/controller/app_bottom_bar_controller.dart';
 import 'package:carstore_car/app/news/model/news_list.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/translations/strings_enum.dart';
+import 'package:carstore_car/routes/app_pages.dart';
 import 'package:carstore_car/utils/app_icons.dart';
 import 'package:carstore_car/widgets/brand_mini_card.dart';
 import 'package:carstore_car/widgets/brand_quick_mini_card.dart';
@@ -19,18 +20,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class HomePage extends GetView<HomeController> {
-  HomePage({
+class HomePage extends GetView<AppBottomBarController> {
+  const HomePage({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
-        init: HomeController(),
+    return GetBuilder<AppBottomBarController>(
+        init: AppBottomBarController(),
         builder: (controller) {
           return controller.isLoading
-              ? const Center(child: CircularProgressIndicator(color: LightThemeColors.primaryColor,))
+              ? const Center(
+                  child: CircularProgressIndicator(
+                  color: LightThemeColors.primaryColor,
+                ))
               : Scaffold(
                   body: Padding(
                     padding:
@@ -65,6 +69,8 @@ class HomePage extends GetView<HomeController> {
                                   GeneralListHorizontalCard(
                                     title: null,
                                     list: controller.brandList,
+                                    onClickMoreText: () =>
+                                        Get.toNamed(Routes.brandDetails),
                                     showMoreText: null,
                                     itemBuilder: (BuildContext, int) {
                                       final list = controller.brandList[int];
@@ -76,6 +82,8 @@ class HomePage extends GetView<HomeController> {
                                   SizedBox(height: 28.h),
                                   GeneralListHorizontalCard(
                                     title: Strings.topDeal.tr,
+                                    onClickMoreText: () =>
+                                        Get.toNamed(Routes.car),
                                     list: controller.carList,
                                     itemBuilder: (BuildContext, int) {
                                       final list = controller.carList[int];
@@ -88,6 +96,8 @@ class HomePage extends GetView<HomeController> {
                                   GeneralListHorizontalCard(
                                     title: Strings.popularBrands.tr,
                                     list: controller.brandList,
+                                    onClickMoreText: () =>
+                                        Get.toNamed(Routes.brand),
                                     itemBuilder: (BuildContext, int) {
                                       final list = controller.brandList[int];
                                       return BrandMiniCard(brand: list);
@@ -99,6 +109,8 @@ class HomePage extends GetView<HomeController> {
                                   GeneralListHorizontalCard(
                                     title: Strings.upcoming.tr,
                                     list: controller.carList,
+                                    onClickMoreText: () =>
+                                        Get.toNamed(Routes.car),
                                     itemBuilder: (BuildContext, int) {
                                       final list = controller.carList[int];
                                       return CarsMiniUpcomingCard(car: list);
@@ -111,6 +123,8 @@ class HomePage extends GetView<HomeController> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     title: Strings.news.tr,
+                                    onClickMoreText: () =>
+                                        Get.toNamed(Routes.news),
                                     scrollDirection: Axis.vertical,
                                     list: NewsList,
                                     itemBuilder: (BuildContext, index) {

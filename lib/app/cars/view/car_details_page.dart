@@ -1,6 +1,6 @@
 // ignore_for_file: deprecated_member_use, avoid_print, must_be_immutable, non_constant_identifier_names, avoid_types_as_parameter_names
 
-import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/app/cars/widget/price_tabs_widget.dart';
 import 'package:carstore_car/app/cars/widget/qa_tabs_widget.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
@@ -20,103 +20,112 @@ import 'package:flutter_svg/svg.dart';
 
 import 'package:get/get.dart';
 
-class CarDetailsPage extends GetView<CarDetailsController> {
-  CarDetailsPage({Key? key}) : super(key: key);
-  var carId = Get.arguments['carId'];
+class CarDetailsPage extends GetView<CarController> {
+  const CarDetailsPage({Key? key}) : super(key: key);
+  // var carId = Get.arguments['carId'];
 
   @override
   Widget build(BuildContext context) {
-    controller.carId.value = carId;
-    // print('Country Name${controller.countriesName[carId]}');
-    return Scaffold(
-      backgroundColor: LightThemeColors.backgroundColor,
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-            child: getSearch(
-              isSearch: false,
-              size: 14,
-              leadingIcon: AppIcons.backtrackIcon,
-              leadingColor: LightThemeColors.dividerColor,
-              trailingData: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () => {},
-                    child: Row(
-                      children: [
-                        Text(controller.carDetails.brand.name),
-                        const Icon(
-                          Icons.keyboard_arrow_down,
-                          color: LightThemeColors.dividerColor,
+    controller.showBottonSheetCity = false;
+    return GetBuilder<CarController>(
+        init: CarController(),
+        builder: (controller) {
+          return controller.isLoading
+              ? const Center(
+                  child: CircularProgressIndicator(
+                  color: LightThemeColors.primaryColor,
+                ),)
+              : Scaffold(
+                  backgroundColor: LightThemeColors.backgroundColor,
+                  body: Column(
+                    children: [
+                      Padding(
+                        padding:
+                            const EdgeInsets.only(top: 30, left: 20, right: 20),
+                        child: getSearch(
+                          isSearch: false,
+                          size: 14,
+                          leadingIcon: AppIcons.backtrackIcon,
+                          leadingColor: LightThemeColors.dividerColor,
+                          trailingData: Row(
+                            children: [
+                              GestureDetector(
+                                onTap: () => {},
+                                child: Row(
+                                  children: [
+                                    Text(controller.carDetails.brand.name),
+                                    const Icon(
+                                      Icons.keyboard_arrow_down,
+                                      color: LightThemeColors.dividerColor,
+                                    ),
+                                    SizedBox(width: 15.w),
+                                  ],
+                                ),
+                              ),
+                              GestureDetector(
+                                child: SvgPicture.asset(
+                                  AppIcons.favorite,
+                                ),
+                                onTap: () => {},
+                              )
+                            ],
+                          ),
+                          trailingIcon: AppIcons.share,
+                          trailingColor: LightThemeColors.dividerColor,
+                          circleAvatarColor: Colors.transparent,
                         ),
-                        SizedBox(width: 15.w),
-                      ],
-                    ),
-                  ),
-                  GestureDetector(
-                    child: SvgPicture.asset(
-                      AppIcons.favorite,
-                    ),
-                    onTap: () => {},
-                  )
-                ],
-              ),
-              trailingIcon: AppIcons.share,
-              trailingColor: LightThemeColors.dividerColor,
-              circleAvatarColor: Colors.transparent,
-            ),
-          ),
-          Flexible(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  GestureDetector(
-                    onPanUpdate: (details) {
-                      controller.changeValueOfTransform(
-                        details.delta.dy * 0.01,
-                        details.delta.dx * 0.01,
-                      );
-                    },
-                    child: Transform(
-                      transform: Matrix4.identity()
-                        ..setEntry(3, 2, 0.001)
-                        ..rotateY(controller.rotationY),
-                      alignment: FractionalOffset.center,
-                      child: Image.network(
-                        controller.carDetails.image,
-                        width: 400.w,
-                        height: 100.h,
-                        fit: BoxFit.contain,
                       ),
-                    ),
+                      Flexible(
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              GestureDetector(
+                                onPanUpdate: (details) {
+                                  controller.changeValueOfTransform(
+                                    details.delta.dy * 0.01,
+                                    details.delta.dx * 0.01,
+                                  );
+                                },
+                                child: Transform(
+                                  transform: Matrix4.identity()
+                                    ..setEntry(3, 2, 0.001)
+                                    ..rotateY(controller.rotationY),
+                                  alignment: FractionalOffset.center,
+                                  child: Image.network(
+                                    controller.carDetails.image,
+                                    width: 400.w,
+                                    height: 100.h,
+                                    fit: BoxFit.contain,
+                                  ),
+                                ),
+                              ),
+                              GeneralListHorizontalCard(
+                                showMoreText: null,
+                                heightSizedBox: 32,
+                                separator: 20,
+                                list: controller.compressed,
+                                itemBuilder: (context, index) {
+                                  final list = controller.compressed[index];
+                                  return ImageMiniCompressedCard(
+                                    compressed: list,
+                                  );
+                                },
+                              ),
+                              SizedBox(height: 20.h),
+                              controller.valueOffers == false
+                                  ? controller.showBottonSheetCity == false
+                                      ? buildContentContainer()
+                                      : buildAlphabetCountryContainer()
+                                  : buildGetOfferContainer()
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  GeneralListHorizontalCard(
-                    showMoreText: null,
-                    heightSizedBox: 32,
-                    separator: 20,
-                    list: controller.compressed,
-                    itemBuilder: (context, index) {
-                      final list = controller.compressed[index];
-                      return ImageMiniCompressedCard(
-                        compressed: list,
-                      );
-                    },
-                  ),
-                  SizedBox(height: 20.h),
-                  controller.valueOffers == false
-                      ? controller.showBottonSheetCity == false
-                      ? buildContentContainer()
-                      : buildAlphabetCountryContainer()
-                      : buildGetOfferContainer()
-                ],
-              ),
-            ),
-          )
-        ],
-      ),
-    );
+                );
+        });
   }
 
   Widget buildContentContainer() => Container(
@@ -260,9 +269,9 @@ class CarDetailsPage extends GetView<CarDetailsController> {
                           height: 685,
                           child: TabBarView(
                             children: [
-                              PriceTabsWidget(controller: controller),
+                              PriceTabsWidget(),
                               const Center(child: Text('Reviews Tab Content')),
-                              QATabsWidget(controller: controller)
+                              QATabsWidget()
                             ],
                           ),
                         ),

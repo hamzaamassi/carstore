@@ -1,33 +1,20 @@
-import 'package:carstore_car/app/brand/model/beand_car_response.dart';
+import 'package:carstore_car/app/brand/controller/brand_controller.dart';
 import 'package:carstore_car/app/brand/model/brand.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
-import 'package:carstore_car/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class BrandPageCard extends StatelessWidget {
+class BrandPageCard extends GetView<BrandController> {
   const BrandPageCard({Key? key, required this.brand}) : super(key: key);
 
   final Brand brand;
 
   @override
   Widget build(BuildContext context) {
-    RxInt? brandId;
-    RxString? branName;
-    Map<String, dynamic> arguments;
     return GestureDetector(
-      onTap: () => {
-        brandId!.value = brand.id,
-        branName!.value = brand.name,
-        arguments = {
-          "brandId": brandId,
-          "branName": branName,
-        },
-        Get.toNamed(Routes.brandDetails,arguments: arguments)
-      },
+      onTap: () =>navigateToBrandDetailsPage(),
       child: Container(
         width: 75.w,
         height: 75.h,
@@ -67,5 +54,11 @@ class BrandPageCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void navigateToBrandDetailsPage() {
+    controller.brandName.value = brand.name;
+    controller.brandId.value = brand.id;
+    controller.loadBrandCars();
   }
 }

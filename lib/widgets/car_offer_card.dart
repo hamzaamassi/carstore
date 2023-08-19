@@ -1,15 +1,15 @@
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/core/config/translations/strings_enum.dart';
-import 'package:carstore_car/routes/app_pages.dart';
 import 'package:carstore_car/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class CarsOfferCard extends StatelessWidget {
+class CarsOfferCard extends GetView<CarController> {
   const CarsOfferCard({Key? key, required this.car}) : super(key: key);
 
   final Car car;
@@ -148,8 +148,6 @@ class CarsOfferCard extends StatelessWidget {
   }
 
   void navigateToCarDetailsPage() {
-    Get.toNamed(Routes.carDetails, arguments: {
-      "carId": car.id,
-    });
+    controller.loadCarDetails(car.id);
   }
 }
