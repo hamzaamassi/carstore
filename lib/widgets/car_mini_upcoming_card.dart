@@ -1,25 +1,23 @@
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
-import 'package:carstore_car/routes/app_pages.dart';
 import 'package:carstore_car/utils/app_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class CarsMiniUpcomingCard extends StatelessWidget {
+class CarsMiniUpcomingCard extends GetView<CarController> {
   const CarsMiniUpcomingCard({Key? key, required this.car}) : super(key: key);
 
-  // final Car car;
   final Car car;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-          Get.toNamed(Routes.carDetails),
-      //, arguments: CarDetailsPage(car: car)
+      onTap: () =>navigateToCarDetailsPage()
+          ,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15.r),
@@ -89,5 +87,8 @@ class CarsMiniUpcomingCard extends StatelessWidget {
         ),
       ),
     );
+  }
+  void navigateToCarDetailsPage() {
+    controller.loadCarDetails(car.id);
   }
 }

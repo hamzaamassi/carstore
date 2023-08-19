@@ -1,6 +1,6 @@
-// ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
+// ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names, must_be_immutable
 
-import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:carstore_car/utils/app_icons.dart';
@@ -11,14 +11,14 @@ import 'package:carstore_car/widgets/qa_item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
-class QATabsWidget extends StatelessWidget {
-  const QATabsWidget( {super.key,required this.controller});
-  final CarDetailsController controller;
+class QATabsWidget extends GetView<CarController> {
+  QATabsWidget( {super.key});
+    List list = [1, 2, 3];
 
   @override
   Widget build(BuildContext context) {
-    List list = [1, 2, 3];
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Column(
@@ -79,7 +79,7 @@ class QATabsWidget extends StatelessWidget {
             separator: 15,
             heightSizedBox: calculateListHeight(
               list,
-              167,
+              177,
               15,
             ),
           ),

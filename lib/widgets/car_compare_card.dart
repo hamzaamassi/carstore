@@ -1,4 +1,4 @@
-import 'package:carstore_car/app/cars/controllers/car_compare_controller.dart';
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class CarCompareCard extends GetView<CarsCompareController> {
+class CarCompareCard extends GetView<CarController> {
   const CarCompareCard({super.key, required this.car});
 
   final Car car;

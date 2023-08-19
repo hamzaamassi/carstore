@@ -1,25 +1,19 @@
+import 'package:carstore_car/app/brand/controller/brand_controller.dart';
 import 'package:carstore_car/app/brand/model/brand.dart';
-import 'package:carstore_car/app/cars/model/car.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
-import 'package:carstore_car/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class BrandMiniCard extends StatelessWidget {
+class BrandMiniCard extends GetView<BrandController> {
   const BrandMiniCard({Key? key, required this.brand}) : super(key: key);
-
-  // final Car car;
   final Brand brand;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-      Get.toNamed(Routes.brand),
-      //, arguments: BrandPage(brand: brand)
+      onTap: () => navigateToBrandPage(),
       child: Container(
         width: 102.w,
         height: 102.h,
@@ -62,5 +56,11 @@ class BrandMiniCard extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  navigateToBrandPage() {
+    controller.brandId.value = brand.id;
+
+    controller.loadBrandCars();
   }
 }

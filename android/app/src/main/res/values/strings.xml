@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">E Commerce Car</string>
-    <string name="facebook_app_id">1234</string>
-    <string name="fb_login_protocol_scheme">fb1234</string>
-    <string name="facebook_client_token">56789</string>
+    <string name="app_name">carstore</string>
+    <string name="facebook_app_id">804613381452769</string>
+    <string name="fb_login_protocol_scheme">fb804613381452769</string>
+    <string name="facebook_client_token">75ebfda29c161128214ae29cd38681a5</string>
 
 </resources>

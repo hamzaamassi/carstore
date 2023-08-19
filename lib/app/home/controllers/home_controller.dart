@@ -13,7 +13,7 @@ class HomeController extends GetxController {
 
   @override
   void onReady() {
-    loadHome();
+    // loadHome();
     super.onReady();
   }
 

@@ -1,4 +1,4 @@
-import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/app/cars/model/compressed_model.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class ImageMiniCompressedCard extends GetView<CarDetailsController> {
+class ImageMiniCompressedCard extends GetView<CarController> {
   const ImageMiniCompressedCard({Key? key, required this.compressed})
       : super(key: key);
   final CompressedModel compressed;

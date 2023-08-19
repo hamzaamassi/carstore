@@ -1,3 +1,4 @@
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:carstore_car/app/cars/model/car.dart';
@@ -8,17 +9,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class CarsMiniCard extends StatelessWidget {
+class CarsMiniCard extends GetView<CarController> {
   const CarsMiniCard({Key? key, required this.car}) : super(key: key);
 
-  // final Car car;
   final Car car;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () =>
-      Get.toNamed(Routes.carDetails),
+      onTap: () => navigateToCarDetailsPage(),
       child: Container(
         width: 150.w,
         height: 225.h,
@@ -33,7 +32,7 @@ class CarsMiniCard extends StatelessWidget {
               top: 15.h,
               right: 15.w,
               left: 15.w,
-              child: Image.network(car.image,height: 80.h,width: 120.w),
+              child: Image.network(car.image, height: 80.h, width: 120.w),
             ),
             Positioned(
               left: 15.w,
@@ -109,16 +108,20 @@ class CarsMiniCard extends StatelessWidget {
               right: 12.w,
               child: GestureDetector(
                 // onTap: () => car.favorite = !car.favorite!,
-                child: car.stars == 3//
+                child: car.stars == 3 //
                     ? SvgPicture.asset(
-                       AppIcons.selectedfavorite,                 )
-                    : SvgPicture.asset(
-                    AppIcons.favorite),
+                        AppIcons.selectedfavorite,
+                      )
+                    : SvgPicture.asset(AppIcons.favorite),
               ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  void navigateToCarDetailsPage() {
+    controller.loadCarDetails(car.id);
   }
 }

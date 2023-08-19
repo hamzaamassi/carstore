@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:carstore_car/app/cars/controllers/car_details_controller.dart';
+import 'package:carstore_car/app/cars/controllers/car_controller.dart';
 import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
 import 'package:carstore_car/core/config/theme/my_fonts.dart';
 import 'package:carstore_car/widgets/calculate_grid_height.dart';
@@ -10,11 +10,11 @@ import 'package:carstore_car/widgets/general_list_grid_card.dart';
 import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-class PriceTabsWidget extends StatelessWidget {
-  PriceTabsWidget({super.key, required this.controller});
+class PriceTabsWidget extends GetView<CarController> {
+  PriceTabsWidget({super.key});
 
-  final CarDetailsController controller;
   List list = [1, 2, 3, 4];
 
   @override
@@ -31,7 +31,7 @@ class PriceTabsWidget extends StatelessWidget {
             showMoreText: null,
             list: list,
             itemBuilder: bulidFourItemList,
-            heightSizedBox: calculateListHeight(list, 50, 21),
+            heightSizedBox: calculateListHeight(list, 55, 21),
           ),
           GeneralListGridCard(
             title: 'Recommend for you',
