@@ -1,6 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:carstore_car/models/country.dart';
+import 'package:carstore/models/country.dart';
 
 List<Country> CountryList = [
   Country(name: 'angel'),

@@ -1,7 +1,7 @@
 // ignore_for_file: unused_element
 
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/models/app_decorations.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/models/app_decorations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';

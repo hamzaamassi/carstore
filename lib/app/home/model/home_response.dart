@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:carstore_car/app/brand/model/brand.dart';
-import 'package:carstore_car/app/cars/model/car.dart';
+import 'package:carstore/app/brand/model/brand.dart';
+import 'package:carstore/app/cars/model/car.dart';
 
 HomeResponse homeResponseFromJson(String str) => HomeResponse.fromJson(json.decode(str));
 

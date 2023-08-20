@@ -1,4 +1,4 @@
-import 'package:carstore_car/app/brand/model/brand.dart';
+import 'package:carstore/app/brand/model/brand.dart';
 
 class Car {
   final int id;

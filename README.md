@@ -1,4 +1,4 @@
-# carstore_car
+# carstore
 
 A new Flutter project.
 

@@ -1,20 +1,20 @@
 // ignore_for_file: avoid_types_as_parameter_names, non_constant_identifier_names
 
-import 'package:carstore_car/app/app_bottom_bar/controller/app_bottom_bar_controller.dart';
-import 'package:carstore_car/app/news/model/news_list.dart';
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/core/config/translations/strings_enum.dart';
-import 'package:carstore_car/routes/app_pages.dart';
-import 'package:carstore_car/utils/app_icons.dart';
-import 'package:carstore_car/widgets/brand_mini_card.dart';
-import 'package:carstore_car/widgets/brand_quick_mini_card.dart';
-import 'package:carstore_car/widgets/calculate_list_height.dart';
-import 'package:carstore_car/widgets/car_list_full_card.dart';
-import 'package:carstore_car/widgets/car_mini_card.dart';
-import 'package:carstore_car/widgets/car_mini_upcoming_card.dart';
-import 'package:carstore_car/widgets/car_news_card.dart';
-import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
-import 'package:carstore_car/widgets/general_search.dart';
+import 'package:carstore/app/app_bottom_bar/controller/app_bottom_bar_controller.dart';
+import 'package:carstore/app/news/model/news_list.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/core/config/translations/strings_enum.dart';
+import 'package:carstore/routes/app_pages.dart';
+import 'package:carstore/utils/app_icons.dart';
+import 'package:carstore/widgets/brand_mini_card.dart';
+import 'package:carstore/widgets/brand_quick_mini_card.dart';
+import 'package:carstore/widgets/calculate_list_height.dart';
+import 'package:carstore/widgets/car_list_full_card.dart';
+import 'package:carstore/widgets/car_mini_card.dart';
+import 'package:carstore/widgets/car_mini_upcoming_card.dart';
+import 'package:carstore/widgets/car_news_card.dart';
+import 'package:carstore/widgets/general_list_horizontal_card.dart';
+import 'package:carstore/widgets/general_search.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

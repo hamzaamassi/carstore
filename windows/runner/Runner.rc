@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "ps.app" "\0"
-            VALUE "FileDescription", "carstore_car" "\0"
+            VALUE "FileDescription", "carstore" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "carstore_car" "\0"
+            VALUE "InternalName", "carstore" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 ps.app. All rights reserved." "\0"
-            VALUE "OriginalFilename", "carstore_car.exe" "\0"
-            VALUE "ProductName", "carstore_car" "\0"
+            VALUE "OriginalFilename", "carstore.exe" "\0"
+            VALUE "ProductName", "carstore" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

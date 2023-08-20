@@ -1,6 +1,6 @@
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/core/config/translations/localization_service.dart';
-import 'package:carstore_car/local/my_shared_pref.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/core/config/translations/localization_service.dart';
+import 'package:carstore/local/my_shared_pref.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

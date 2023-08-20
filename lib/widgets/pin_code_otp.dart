@@ -1,5 +1,5 @@
-import 'package:carstore_car/app/auth/controller/login_controller.dart';
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/app/auth/controller/login_controller.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';

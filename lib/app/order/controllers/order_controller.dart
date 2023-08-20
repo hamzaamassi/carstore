@@ -1,8 +1,8 @@
-import 'package:carstore_car/app/order/models/order.dart';
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/routes/app_pages.dart';
-import 'package:carstore_car/utils/app_icons.dart';
-import 'package:carstore_car/widgets/custom_primary_button.dart';
+import 'package:carstore/app/order/models/order.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/routes/app_pages.dart';
+import 'package:carstore/utils/app_icons.dart';
+import 'package:carstore/widgets/custom_primary_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

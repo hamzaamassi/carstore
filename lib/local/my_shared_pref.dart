@@ -1,4 +1,4 @@
-import 'package:carstore_car/core/config/translations/localization_service.dart';
+import 'package:carstore/core/config/translations/localization_service.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 

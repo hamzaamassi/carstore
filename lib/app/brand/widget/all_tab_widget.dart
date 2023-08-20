@@ -1,7 +1,7 @@
-import 'package:carstore_car/app/brand/controller/brand_controller.dart';
-import 'package:carstore_car/widgets/calculate_list_height.dart';
-import 'package:carstore_car/widgets/car_details_card.dart';
-import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
+import 'package:carstore/app/brand/controller/brand_controller.dart';
+import 'package:carstore/widgets/calculate_list_height.dart';
+import 'package:carstore/widgets/car_details_card.dart';
+import 'package:carstore/widgets/general_list_horizontal_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

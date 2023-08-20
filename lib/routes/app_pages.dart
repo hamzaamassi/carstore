@@ -1,29 +1,29 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:carstore_car/app/app_bottom_bar/view/app_bottom_bar.dart';
-import 'package:carstore_car/app/auth/view/login_info_page.dart';
-import 'package:carstore_car/app/auth/view/login_location_page.dart';
-import 'package:carstore_car/app/auth/view/login_page.dart';
-import 'package:carstore_car/app/auth/view/login_verification_page.dart';
-import 'package:carstore_car/app/auto_part/views/auto_part_page.dart';
-import 'package:carstore_car/app/brand/view/brand_details_page.dart';
-import 'package:carstore_car/app/brand/view/brand_page.dart';
-import 'package:carstore_car/app/brand/view/barnd_search_page.dart';
-import 'package:carstore_car/app/cars/view/car_compare__list_page.dart';
-import 'package:carstore_car/app/cars/view/car_compare_page.dart';
-import 'package:carstore_car/app/cars/view/car_details_page.dart';
-import 'package:carstore_car/app/cars/view/car_info_page.dart';
-import 'package:carstore_car/app/cars/view/car_page.dart';
-import 'package:carstore_car/app/community/view/community_page.dart';
-import 'package:carstore_car/app/home/view/home_page.dart';
-import 'package:carstore_car/app/news/view/news_details_page.dart';
-import 'package:carstore_car/app/news/view/news_review_page.dart';
-import 'package:carstore_car/app/order/views/order_page.dart';
-import 'package:carstore_car/app/search/views/search_model_page.dart';
-import 'package:carstore_car/app/search/views/search_page.dart';
-import 'package:carstore_car/app/video/views/video_page.dart';
-import 'package:carstore_car/app/video/views/videos_review_page.dart';
-import 'package:carstore_car/binding/app_binding.dart';
+import 'package:carstore/app/app_bottom_bar/view/app_bottom_bar.dart';
+import 'package:carstore/app/auth/view/login_info_page.dart';
+import 'package:carstore/app/auth/view/login_location_page.dart';
+import 'package:carstore/app/auth/view/login_page.dart';
+import 'package:carstore/app/auth/view/login_verification_page.dart';
+import 'package:carstore/app/auto_part/views/auto_part_page.dart';
+import 'package:carstore/app/brand/view/brand_details_page.dart';
+import 'package:carstore/app/brand/view/brand_page.dart';
+import 'package:carstore/app/brand/view/barnd_search_page.dart';
+import 'package:carstore/app/cars/view/car_compare__list_page.dart';
+import 'package:carstore/app/cars/view/car_compare_page.dart';
+import 'package:carstore/app/cars/view/car_details_page.dart';
+import 'package:carstore/app/cars/view/car_info_page.dart';
+import 'package:carstore/app/cars/view/car_page.dart';
+import 'package:carstore/app/community/view/community_page.dart';
+import 'package:carstore/app/home/view/home_page.dart';
+import 'package:carstore/app/news/view/news_details_page.dart';
+import 'package:carstore/app/news/view/news_review_page.dart';
+import 'package:carstore/app/order/views/order_page.dart';
+import 'package:carstore/app/search/views/search_model_page.dart';
+import 'package:carstore/app/search/views/search_page.dart';
+import 'package:carstore/app/video/views/video_page.dart';
+import 'package:carstore/app/video/views/videos_review_page.dart';
+import 'package:carstore/binding/app_binding.dart';
 import 'package:get/get.dart';
 
 part 'app_routes.dart';
@@ -31,7 +31,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.appBottomBar;
+  static const INITIAL = Routes.login;
 
   static final routes = [
     GetPage(

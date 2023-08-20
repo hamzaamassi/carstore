@@ -1,6 +1,6 @@
 import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
-import 'package:carstore_car/app/brand/controller/brand_controller.dart';
-import 'package:carstore_car/core/config/theme/my_fonts.dart';
+import 'package:carstore/app/brand/controller/brand_controller.dart';
+import 'package:carstore/core/config/theme/my_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';

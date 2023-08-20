@@ -1,9 +1,8 @@
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/core/config/theme/my_fonts.dart';
-import 'package:carstore_car/routes/app_pages.dart';
-import 'package:carstore_car/utils/app_icons.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/core/config/theme/my_fonts.dart';
+import 'package:carstore/routes/app_pages.dart';
+import 'package:carstore/utils/app_icons.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

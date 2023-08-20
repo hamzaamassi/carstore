@@ -1,6 +1,6 @@
 // ignore_for_file: dead_code
 
-import 'package:carstore_car/widgets/section_list_title.dart';
+import 'package:carstore/widgets/section_list_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -1,6 +1,6 @@
 {
-    "name": "carstore_car",
-    "short_name": "carstore_car",
+    "name": "carstore",
+    "short_name": "carstore",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,5 +1,5 @@
-import 'package:carstore_car/app/auto_part/models/auto_part.dart';
-import 'package:carstore_car/utils/app_icons.dart';
+import 'package:carstore/app/auto_part/models/auto_part.dart';
+import 'package:carstore/utils/app_icons.dart';
 import 'package:get/get.dart';
 
 List<AutoPart> AutoPartList = [

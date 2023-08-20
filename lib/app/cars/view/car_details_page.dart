@@ -1,18 +1,18 @@
 // ignore_for_file: deprecated_member_use, avoid_print, must_be_immutable, non_constant_identifier_names, avoid_types_as_parameter_names
 
-import 'package:carstore_car/app/cars/controllers/car_controller.dart';
-import 'package:carstore_car/app/cars/widget/price_tabs_widget.dart';
-import 'package:carstore_car/app/cars/widget/qa_tabs_widget.dart';
-import 'package:carstore_car/core/config/theme/light_theme_colors.dart';
-import 'package:carstore_car/core/config/theme/my_fonts.dart';
-import 'package:carstore_car/utils/app_icons.dart';
-import 'package:carstore_car/widgets/alphabet_scroll_view_country.dart';
-import 'package:carstore_car/widgets/custom_primary_button.dart';
-import 'package:carstore_car/widgets/custom_text_field.dart';
-import 'package:carstore_car/widgets/general_list_horizontal_card.dart';
-import 'package:carstore_car/widgets/general_search.dart';
-import 'package:carstore_car/widgets/image_mini_compressed_card.dart';
-import 'package:carstore_car/widgets/key_specs_card.dart';
+import 'package:carstore/app/cars/controllers/car_controller.dart';
+import 'package:carstore/app/cars/widget/price_tabs_widget.dart';
+import 'package:carstore/app/cars/widget/qa_tabs_widget.dart';
+import 'package:carstore/core/config/theme/light_theme_colors.dart';
+import 'package:carstore/core/config/theme/my_fonts.dart';
+import 'package:carstore/utils/app_icons.dart';
+import 'package:carstore/widgets/alphabet_scroll_view_country.dart';
+import 'package:carstore/widgets/custom_primary_button.dart';
+import 'package:carstore/widgets/custom_text_field.dart';
+import 'package:carstore/widgets/general_list_horizontal_card.dart';
+import 'package:carstore/widgets/general_search.dart';
+import 'package:carstore/widgets/image_mini_compressed_card.dart';
+import 'package:carstore/widgets/key_specs_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

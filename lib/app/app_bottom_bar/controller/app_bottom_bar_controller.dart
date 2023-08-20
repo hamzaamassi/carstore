@@ -1,10 +1,10 @@
-import 'package:carstore_car/app/brand/model/brand.dart';
-import 'package:carstore_car/app/cars/model/car.dart';
-import 'package:carstore_car/app/cars/model/car_list_response.dart';
-import 'package:carstore_car/app/home/model/home_response.dart';
-import 'package:carstore_car/services/base_client.dart';
-import 'package:carstore_car/utils/app_icons.dart';
-import 'package:carstore_car/utils/constants.dart';
+import 'package:carstore/app/brand/model/brand.dart';
+import 'package:carstore/app/cars/model/car.dart';
+import 'package:carstore/app/cars/model/car_list_response.dart';
+import 'package:carstore/app/home/model/home_response.dart';
+import 'package:carstore/services/base_client.dart';
+import 'package:carstore/utils/app_icons.dart';
+import 'package:carstore/utils/constants.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
@@ -38,6 +38,7 @@ class AppBottomBarController extends GetxController {
         Constants.home,
         onSuccess: (response) {
           HomeResponse loadedHome = homeResponseFromJson(response.toString());
+          print('response: ${response.toString()}');
           sliderList.value = loadedHome.data.sliders;
           brandList.value = loadedHome.data.brands;
           carList.value = loadedHome.data.cars;

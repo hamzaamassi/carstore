@@ -1,4 +1,4 @@
-import 'package:carstore_car/app/cars/model/car.dart';
+import 'package:carstore/app/cars/model/car.dart';
 
 import 'dart:convert';
 
