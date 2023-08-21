@@ -24,135 +24,134 @@ class SearchPage extends GetView<SearchProductController> {
       '3 Series Gt',
       '3 Series Gt',
     ];
-    // return Scaffold(
-    //   body: Padding(
-    //     padding: EdgeInsets.symmetric(horizontal: 20.w),
-    //     child: Column(
-    //       children: [
-    //         SizedBox(height: 30.h),
-    //         getSearch(
-    //           isSearch: true,
-    //           size: 13,
-    //           leadingIcon: AppIcons.closeIcon,
-    //           suffixIcon: AppIcons.voice,
-    //           circleAvatarColor: LightThemeColors.backgroundColor,
-    //           leadingOnTap: () => {},
-    //           suffixOnTap: () => {},
-    //         ),
-    //         SizedBox(height: 38.h),
-    //         Expanded(
-    //           child: SingleChildScrollView(
-    //             child: Column(
-    //               children: [
-    //                 Row(
-    //                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //                   children: [
-    //                     Text(
-    //                       'History',
-    //                       style: TextStyle(
-    //                           fontWeight: FontWeight.bold,
-    //                           fontSize: MyFonts.sectionListTitle),
-    //                     ),
-    //                     GestureDetector(
-    //                       child: Row(
-    //                         children: [
-    //                           SvgPicture.asset(AppIcons.delete),
-    //                           SizedBox(width: 7.w),
-    //                           const Opacity(
-    //                             opacity: .8,
-    //                             child: Text('Clear History'),
-    //                           )
-    //                         ],
-    //                       ),
-    //                     )
-    //                   ],
-    //                 ),
-    //                 SizedBox(height: 28.h),
-    //                 GeneralListHorizontalCard(
-    //                     showMoreText: null,
-    //                     list: history,
-    //                     apiCallStatus: false,
-    //                     itemBuilder: (BuildContext, index) {
-    //                       return controller.buildHistory(context, index, history);
-    //                     },
-    //                     separator: 15,
-    //                     heightSizedBox: 34),
-    //                 SizedBox(height: 48.h),
-    //                 SizedBox(
-    //                   height: 556.h,
-    //                   width: double.infinity,
-    //                   child: DefaultTabController(
-    //                     length: 2,
-    //                     child: Column(
-    //                       crossAxisAlignment: CrossAxisAlignment.start,
-    //                       children: [
-    //                         Row(
-    //                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //                           children: [
-    //                             Container(
-    //                               constraints: BoxConstraints(maxWidth: 250.w),
-    //                               child: const TabBar(
-    //                                 isScrollable: true, // Set this to true
-    //                                 labelColor: LightThemeColors.primaryColor,
-    //                                 labelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-    //                                 unselectedLabelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-    //                                 unselectedLabelColor: LightThemeColors.dividerColor,
-    //                                 indicatorSize: TabBarIndicatorSize.label,
-    //                                 indicatorWeight: 3,
-    //                                 indicatorColor: LightThemeColors.primaryColor,
-    //                                 tabs: [
-    //                                   Tab(text: 'Sales'),
-    //                                   Tab(text: 'Hot'),
-    //                                 ],
-    //                               ),
-    //                             ),
-    //                             Opacity(
-    //                               opacity: .8,
-    //                               child: Row(
-    //                                 children: const [
-    //                                   Text('Dec,2020'),
-    //                                   Icon(Icons.arrow_drop_down)
-    //                                 ],
-    //                               ),
-    //                             )
-    //                           ],
-    //                         ),
-    //                         SizedBox(height: 20.h),
-    //                         Expanded(
-    //                           child: TabBarView(
-    //                             children: [
-    //                               GeneralListHorizontalCard(
-    //                                 showMoreText: null,
-    //                                 list: ListCar,
-    //                                 physics: const NeverScrollableScrollPhysics(),
-    //                                 scrollDirection: Axis.vertical,
-    //                                 apiCallStatus: false,
-    //                                 itemBuilder: (BuildContext, index) {
-    //                                   final list = ListCar[index];
-    //                                   return CarSearchCard(car: list);
-    //                                 },
-    //                                 separator: 20,
-    //                                 heightSizedBox:
-    //                                 height,
-    //                               ),
-    //                               Container()
-    //                             ],
-    //                           ),
-    //                         ),
-    //                       ],
-    //                     ),
-    //                   ),
-    //                 ),
-    //
-    //
-    //               ],
-    //             ),
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
+    return Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        child: Column(
+          children: [
+            SizedBox(height: 30.h),
+            getSearch(
+              isSearch: true,
+              size: 13,
+              leadingIcon: AppIcons.closeIcon,
+              suffixIcon: AppIcons.voice,
+              circleAvatarColor: LightThemeColors.backgroundColor,
+              leadingOnTap: () => {},
+              suffixOnTap: () => {},
+            ),
+            SizedBox(height: 38.h),
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'History',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: MyFonts.sectionListTitle),
+                        ),
+                        GestureDetector(
+                          child: Row(
+                            children: [
+                              SvgPicture.asset(AppIcons.delete),
+                              SizedBox(width: 7.w),
+                              const Opacity(
+                                opacity: .8,
+                                child: Text('Clear History'),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 28.h),
+                    GeneralListHorizontalCard(
+                        showMoreText: null,
+                        list: history,
+                        itemBuilder: (BuildContext, index) {
+                          return controller.buildHistory(context, index, history);
+                        },
+                        separator: 15,
+                        heightSizedBox: 34),
+                    SizedBox(height: 48.h),
+                    SizedBox(
+                      height: 556.h,
+                      width: double.infinity,
+                      child: DefaultTabController(
+                        length: 2,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  constraints: BoxConstraints(maxWidth: 250.w),
+                                  child: const TabBar(
+                                    isScrollable: true, // Set this to true
+                                    labelColor: LightThemeColors.primaryColor,
+                                    labelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                                    unselectedLabelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                                    unselectedLabelColor: LightThemeColors.dividerColor,
+                                    indicatorSize: TabBarIndicatorSize.label,
+                                    indicatorWeight: 3,
+                                    indicatorColor: LightThemeColors.primaryColor,
+                                    tabs: [
+                                      Tab(text: 'Sales'),
+                                      Tab(text: 'Hot'),
+                                    ],
+                                  ),
+                                ),
+                                Opacity(
+                                  opacity: .8,
+                                  child: Row(
+                                    children: const [
+                                      Text('Dec,2020'),
+                                      Icon(Icons.arrow_drop_down)
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                            SizedBox(height: 20.h),
+                            Expanded(
+                              child: TabBarView(
+                                children: [
+                                  // GeneralListHorizontalCard(
+                                  //   showMoreText: null,
+                                  //   list: ListCar,
+                                  //   physics: const NeverScrollableScrollPhysics(),
+                                  //   scrollDirection: Axis.vertical,
+                                  //   itemBuilder: (BuildContext, index) {
+                                  //     final list = ListCar[index];
+                                  //     return CarSearchCard(car: list);
+                                  //   },
+                                  //   separator: 20,
+                                  //   heightSizedBox:
+                                  //   height,
+                                  // ),
+                                  Container(),
+                                  Container()
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
 
   }
 }
